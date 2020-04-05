@@ -1,13 +1,13 @@
 version: 0.2
 phases:
-  pre-build:
+  pre_build:
     commands:
     - echo "From within the pre-build phase"
   build:
     commands:
     - echo "From within the build phase"
     - mvn clean prepare-package war:explode
-  post-build:
+  post_build:
     commands:
     - echo "From within the post build phase"
     - mv target/deploy ./
